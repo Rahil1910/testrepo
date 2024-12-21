@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: grey;
+        }
+
+        h2{
+            text-align: center;
+            color: #333;
+            margin-top: 30px;
+        }
+
+        form{
+            max-width: 600px;
+            margin: 30px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+
+        }
+
+        label{
+            font-size: 14px;
+            color: #555;
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="date"],
+        input[type="tel"],
+        textarea,select{
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border:1px solid grey;
+            border-radius: 5px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <form action="/submit" method="POST">
+        <h2>Application Form</h2>
+        
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="name" name="email" placeholder="Enter your email" required><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required><br>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required><br>
+
+        <label>Gender:</label><br>
+        <input type="radio" id="gender-male" name="gender" value="male">
+        <label for="gender-male">Male</label><br>
+
+        <input type="radio" id="gender-female" name="gender" value="female">
+        <label for="gender-female">Female</label><br>
+
+        <input type="radio" id="gender-others" name="gender" value="others">
+        <label for="gender-others">Others</label><br>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" placeholder="Type your number here"><br>
+
+        <label for="address ">Address:</label>
+        <textarea id="address" name="address" placeholder="Enter your address" rows="4" required></textarea><br>
+
+        <label for="country">Country:</label>
+        <select id="country" name="country" required>
+            <option value="" disabled selected>Select your country</option>
+            <option value="in">India</option>
+            <option value="uk">United Kingdom</option>
+            <option value="ca">Canada</option>
+        </select><br>
+
+        <label>Hobbies:</label>
+        <input type="checkbox" id="hobby-reading" name="hobbies" value="reading">
+        <label for="hobby-reading">Reading</label>
+
+        <input type="checkbox" id="hobby-gym" name="hobbies" value="gym">
+        <label for="hobby-gym">Gym</label>
+
+        <input type="checkbox" id="hobby-football" name="hobbies" value="football">
+        <label for="hobby-football">Football</label><br>
+
+        <label for="file">Upload Resume:</label>
+        <input type="file" id="file" name="file" accept=".pdf,.doc,.docx"><br>
+
+
+        <input type="checkbox" id="terms">
+        <label for="terms">I agree to Term and Condition</label><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
